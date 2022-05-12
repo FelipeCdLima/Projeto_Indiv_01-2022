@@ -1,0 +1,50 @@
+body {
+    background-color: rgb(46, 46, 46);
+    margin: 0;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    color: #daa520;
+}
+
+.header {
+    height: 12vh;
+    width: 100%;
+    background-color: rgb(24, 24, 24);
+}
+
+.container {
+    width: 80%;
+    align-self: center;
+    justify-content: space-around;
+    display: flex;
+    margin: auto;
+}
+
+.cont1 {
+    margin: auto;
+    width: 30%;
+    display: flex;
+    justify-content: space-evenly;
+    margin-top: 0.6vh;
+}
+
+.header img{
+    margin: 0.5%;
+}
+
+.navbar {
+    list-style: none;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    padding: 0%;
+    width: 60%;
+}
+
+a {
+    text-decoration: none;
+    color: #daa520;
+}
+
+.destaque a{
+    color: rgb(220, 20, 20);
+}
