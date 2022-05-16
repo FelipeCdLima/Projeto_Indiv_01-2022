@@ -18,41 +18,200 @@
             <ul class="navbar">
                 <li>
                     <a href="home.html">
-                        Home
+                        HOME
                     </a>
                 </li>
                     
                 <li>
                     <a href="guias.html">
-                        Guias
+                        GUIAS
                     </a>
                 </li>
                     
                 <li>
                     <a href="rotation.html">
-                        Rotação
+                        ROTAÇÃO
                     </a>
                 </li>
         
                 <li class="destaque">
                     <a href="galeria.html">
-                        Galeria
+                        GALERIA
                     </a>
                 </li>
         
                 <li>
                     <a href="cadastro.html">
-                        Cadastro
+                        CADASTRO
                     </a>
                 </li>
         
                 <li>
                     <a href="login.html">
-                        Login
+                        LOGIN
                     </a>
                 </li>
-            </ul> 
+            </ul>
+        </div>
+    </div>
+
+    <div class="cont2">
+        <div class="rowtitle" onclick="show1()">
+            <h2>Artes Conceituais</h2>
+        </div>
+        <div class="rowtitle" onclick="show2()">
+            <h2>Personagens Black Mages</h2>
+        </div>
+        <div class="rowtitle" onclick="show3()">
+            <h2>Y'shtola Rhul 💜</h2>
+        </div>
+    </div>
+    <div class="container cont1">
+        <div class="row" id="row1" style="display: none;">
+            <div class="cell">
+                <img src="https://static.wikia.nocookie.net/finalfantasy/images/8/8b/FFD2_Jornee_Black_Mage_Promotional_Art.jpg/revision/latest?cb=20180107112453">
+                <p>Final Fantasy Dimensions II</p>
+            </div>
+            <div class="cell">
+                <img src="https://static.wikia.nocookie.net/finalfantasy/images/6/6b/Arc-BlackMage.png/revision/latest/scale-to-width-down/150?cb=20110115092728">
+                <p>Final Fantasy III (DS)</p>
+            </div>
+            <div class="cell">
+                <img src="https://static.wikia.nocookie.net/finalfantasy/images/c/c5/Elezen_Black_Mage_XIV.png/revision/latest?cb=20130516225754">
+                <p>Final Fantasy XIV - A Realm Reborn</p>
+            </div>
+        </div>  
+        <div class="cont3">
+            <div class="rowtitle" style="display: none;" id="rowhide1">
+                <h2>Personagens Oficiais</h2>
+            </div>
+        </div>
+        <div class="row" id="row2" style="display: none;">
+            <div class="cell">
+                <img src="https://static.wikia.nocookie.net/finalfantasy/images/5/5b/FFX_Lulu_Art.png/revision/latest?cb=20140809031913">
+                <p>Lulu - Final Fantasy X</p>
+            </div>
+            <div class="cell">
+                <img src="https://static.wikia.nocookie.net/finalfantasy/images/e/ec/WotV_Miche.png/revision/latest?cb=20200525150641">
+                <p>Miche - War of the Visions: Final Fantasy Brave Exvius</p>
+            </div>
+            <div class="cell">
+                <img src="https://static.wikia.nocookie.net/finalfantasy/images/b/b5/Vivi_Ornitier_from_Final_Fantasy_IX_render.png/revision/latest?cb=20200516160037">
+                <p>Vivi Ornitier - Final Fantasy IX</p>
+            </div>
+        </div>
+        <div class="row" id="row3" style="display: none;">
+            <div class="cell">
+                <img src="">
+                <p></p>
+            </div>
+            <div class="cell">
+                <img src="">
+                <p></p>
+            </div>
+            <div class="cell">
+                <img src="">
+                <p></p>
+            </div>
+        </div>
+        <div class="cont3">
+            <div class="rowtitle" style="display: none;" id="rowhide2">
+                <h2>Personagens Da Comunidade</h2>
+            </div>
+        </div>
+        <div class="row" id="row4" style="display: none;">
+            <div class="cell">
+                <img src="">
+                <p></p>
+            </div>
+            <div class="cell">
+                <img src="">
+                <p></p>
+            </div>
+            <div class="cell">
+                <img src="">
+                <p></p>
+            </div>
+        </div>
+        <div class="row" id="row5" style="display: none;">
+            <div class="cell">
+                <img src="">
+                <p></p>
+            </div>
+            <div class="cell">
+                <img src="">
+                <p></p>
+            </div>
+            <div class="cell">
+                <img src="">
+                <p></p>
+            </div>
+        </div>
+        <div class="row" id="row6" style="display: none;">
+            <div class="cell">
+                <img src="https://static.wikia.nocookie.net/finalfantasy/images/2/24/Y%27shtola_NPC_Render_2.png/revision/latest?cb=20190716211909">
+                <p>Y'shtola - A Realm Reborn</p>
+            </div>
+            <div class="cell">
+                <img src="https://static.wikia.nocookie.net/finalfantasy/images/1/12/FFXIV_HW_Y%27shtola_%28Trust%29.png/revision/latest?cb=20200412021850">
+                <p>Y'shtola - Heavensward</p>
+            </div>
+            <div class="cell">
+                <img src="https://static.wikia.nocookie.net/finalfantasy/images/7/72/FFXIV_SH_Y%27shtola_2.png/revision/latest?cb=20190616200308">
+                <p>Y'shtola - Shadowbringers</p>
+            </div>
+        </div>
+        <div class="row" id="row7" style="display: none;">
+            <div class="cell">
+                <img src="">
+                <p></p>
+            </div>
+            <div class="cell">
+                <img src="">
+                <p></p>
+            </div>
+            <div class="cell">
+                <img src="">
+                <p></p>
+            </div>
         </div>
     </div>
 </body>
 </html>
+<script>
+    function show1() {
+        row1.style.display = 'flex';
+        row2.style.display = 'none';
+        row3.style.display = 'none';
+        row4.style.display = 'none';
+        row5.style.display = 'none';
+        row6.style.display = 'none';
+        row7.style.display = 'none';
+        rowhide1.style.display = 'none';
+        rowhide2.style.display = 'none';
+    }
+
+    function show2() {
+        row1.style.display = 'none';
+        row2.style.display = 'flex';
+        row3.style.display = 'flex';
+        row4.style.display = 'flex';
+        row5.style.display = 'flex';
+        row6.style.display = 'none';
+        row7.style.display = 'none';
+        rowhide1.style.display = 'flex';
+        rowhide2.style.display = 'flex';
+    }
+
+    function show3() {
+        row1.style.display = 'none';
+        row2.style.display = 'none';
+        row3.style.display = 'none';
+        row4.style.display = 'none';
+        row5.style.display = 'none';
+        row6.style.display = 'flex';
+        row7.style.display = 'flex';
+        rowhide1.style.display = 'none';
+        rowhide2.style.display = 'none';
+    }
+</script>

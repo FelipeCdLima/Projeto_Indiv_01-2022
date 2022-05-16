@@ -17,6 +17,7 @@ body {
     justify-content: space-around;
     display: flex;
     margin: auto;
+    border: dashed chartreuse 3px;
 }
 
 .cont1 {
@@ -46,5 +47,85 @@ a {
 }
 
 .destaque a{
-    color: rgb(220, 20, 20);
+    color: #f1d488;
+}
+
+.photoslide { /*CAROUSEL CSS HTML*/
+    width: 100%;
+    height: 100vh;
+    background-color: rgb(30, 30, 30);
+}
+
+#div_lore {
+    color: #daa520;
+    border-left: 10vw; border-right: 10vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-size: 4vh;
+    padding: 1vw;
+
+}
+
+#div_lore h2 {
+    font-size: 8vh;
+}
+
+.container.cont1 {
+    border: dashed red 3px;
+    width: 80vw;
+    display: flex;
+    margin-left: 10vw;
+    margin-right: 10vw;
+    flex-direction: column;
+}
+
+.cont2{
+    width: 80vw;
+    margin-left: 10vw; margin-right: 10vw; margin-top: 5vh;
+    display: flex;
+    text-align: center;
+    justify-content: space-evenly;
+    border: dashed blueviolet 3px;
+}
+
+.rowtitle{
+    text-align: center;
+    background-color: rgb(30, 30, 30);
+    margin-bottom: 1vh;
+    width: 25vw;
+    margin-left: 1vh;
+    margin-right: 1vh;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    line-height: 5vh;
+    border: dashed pink 3px;
+}
+
+.row { /*Animations and Transitions CSS*/
+    display: flex;
+    justify-content: space-evenly;
+    width: 80vw;
+    border: dashed green 3px;
+}
+
+.row img {
+    width: 25vw;
+    height: 75vh;
+}
+
+.cell {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    margin: 1vh;
+    border: solid #daa520 0.2vw;
+    width: 25vw;
+}
+
+.cont3 {
+    border: dashed orangered 3px;
+    display: flex;
+    justify-content: center;
 }
