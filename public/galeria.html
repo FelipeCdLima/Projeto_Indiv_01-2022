@@ -8,7 +8,7 @@
     <title>Galeria</title>
 
     <script src="js/funcoes.js"></script>
-    
+
     <link rel="short-cut icon" href="https://ffxiv.gamerescape.com/w/images/8/83/Black_Mage_Icon_7.png">
     <link rel="stylesheet" href="CSS/glam1.css">
 </head>
@@ -85,11 +85,11 @@
                 <p>Final Fantasy XIV - A Realm Reborn</p>
             </div>
         </div>  
-        <div class="cont3">
+        <!--<div class="cont3">
             <div class="rowtitle" style="display: none;" id="rowhide1">
                 <h2>Personagens Oficiais</h2>
             </div>
-        </div>
+        </div>-->
         <div class="row" id="row2" style="display: none;">
             <div class="cell">
                 <img src="">
@@ -118,11 +118,11 @@
                 <p></p>
             </div>
         </div>
-        <div class="cont3">
+        <!--<div class="cont3">
             <div class="rowtitle" style="display: none;" id="rowhide2">
                 <h2>Personagens Da Comunidade</h2>
             </div>
-        </div>
+        </div>-->
         <div class="row" id="row4" style="display: none;">
             <div class="cell">
                 <img src="">
@@ -183,39 +183,70 @@
 </body>
 </html>
 <script>
+    var reg = [];
+    reg = [row1, row2, row3, row4, row5, row6, row7];
+
     function show1() {
-        row1.style.display = 'flex';
-        row2.style.display = 'none';
-        row3.style.display = 'none';
-        row4.style.display = 'none';
-        row5.style.display = 'none';
-        row6.style.display = 'none';
-        row7.style.display = 'none';
-        rowhide1.style.display = 'none';
-        rowhide2.style.display = 'none';
+        //reg[0].style.display = 'flex';
+        //reg[1].style.display = 'none';
+        //reg[2].style.display = 'none';
+        //reg[3].style.display = 'none';
+        //reg[4].style.display = 'none';
+        //reg[5].style.display = 'none';
+        //reg[6].style.display = 'none';
+        //rowhide1.style.display = 'none';
+        //rowhide2.style.display = 'none';
+
+        for (var index = 0; index < reg.length; index++) {
+            if (index > 0) {
+                reg[index].style.display = 'none';
+            } else {
+                reg[index].style.display = 'flex';
+            }
+            
+        }
     }
 
     function show2() {
-        row1.style.display = 'none';
-        row2.style.display = 'flex';
-        row3.style.display = 'flex';
-        row4.style.display = 'flex';
-        row5.style.display = 'flex';
-        row6.style.display = 'none';
-        row7.style.display = 'none';
-        rowhide1.style.display = 'flex';
-        rowhide2.style.display = 'flex';
+        //reg[0].style.display = 'none';
+        //reg[1].style.display = 'flex';
+        //reg[2].style.display = 'flex';
+        //reg[3].style.display = 'flex';
+        //reg[4].style.display = 'flex';
+        //reg[5].style.display = 'none';
+        //reg[6].style.display = 'none';
+        //rowhide1.style.display = 'flex';
+        //rowhide2.style.display = 'flex';
+
+        for (var index = 0; index < reg.length; index++) {
+            if (index == 0 || index > 4) {
+                reg[index].style.display = 'none';
+            } else {
+                reg[index].style.display = 'flex';
+            }
+            
+        }
     }
 
     function show3() {
-        row1.style.display = 'none';
-        row2.style.display = 'none';
-        row3.style.display = 'none';
-        row4.style.display = 'none';
-        row5.style.display = 'none';
-        row6.style.display = 'flex';
-        row7.style.display = 'flex';
-        rowhide1.style.display = 'none';
-        rowhide2.style.display = 'none';
+        //reg[0].style.display = 'none';
+        //reg[1].style.display = 'none';
+        //reg[2].style.display = 'none';
+        //reg[3].style.display = 'none';
+        //reg[4].style.display = 'none';
+        //reg[5].style.display = 'flex';
+        //reg[6].style.display = 'flex';
+        //rowhide1.style.display = 'none';
+        //rowhide2.style.display = 'none';
+
+        for (var index = 0; index < reg.length; index++) {
+                if (index < 5) {
+                    reg[index].style.display = 'none';
+                } else {
+                    reg[index].style.display = 'flex';
+                }
+                
+            }
+
     }
 </script>
