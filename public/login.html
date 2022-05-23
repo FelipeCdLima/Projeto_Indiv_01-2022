@@ -62,4 +62,36 @@
     </div>
 </body>
 
+<div class="container">
+    <div class="loginCard">
+        <div class="cell">
+            <h2>Usuário</h2>
+            <input type="text">
+        </div>
+        <div class="cell">
+            <h2>Senha</h2>
+            <input type="password" id="pass_inp">
+            <button onclick="passShow()">Mostrar Senha</button>
+        </div>
+        <button>ENTRAR</button>
+    </div>
+</div>
+
 </html>
+<script>
+    var show = 0;
+
+    function passShow() {
+        var vShow = show == 0;
+
+        if (vShow == true) {
+            pass_inp.type = 'text';
+            show = 1;
+        } else if (vShow == false) {
+            pass_inp.type = 'password';
+            show = 0;
+        } else {
+            alert('Erro em function_Show()')
+        }
+    }
+</script>
