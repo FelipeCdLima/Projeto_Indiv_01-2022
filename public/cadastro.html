@@ -21,7 +21,7 @@
             </div>
             <ul class="navbar">
                 <li>
-                    <a href="home.html">
+                    <a href="index.html">
                         HOME
                     </a>
                 </li>
@@ -137,13 +137,9 @@
                 console.log("resposta: ", resposta);
 
                 if (resposta.ok) {
-                    cardErro.style.display = "block";
-
-                    mensagem_erro.innerHTML = "Cadastro realizado com sucesso! Redirecionando para tela de Login...";
-
                     setTimeout(() => {
                         window.location = "login.html";
-                    }, "2000")
+                    }, 2000)
                     
                     limparFormulario();
                     finalizarAguardar();
