@@ -62,7 +62,7 @@
         <div class="cadCard">
             <div class="cell">
                 <h2>Nome de Usuário</h2>
-                <input type="text">
+                <input type="text" id="nome_inp">
             </div>
             <div class="cell">
                 <h2>Senha</h2>
@@ -112,6 +112,55 @@
     }
 
     function verify() {
-        
+       var nomeVar = nome_inp.value;
+       var senhaVar = pass_inp.value;
+       var pConf = passConf_inp.value;
+
+       if (senhaVar != pConf) {
+           alert('As duas senhas devem ser iguais!')
+       } else if (nomeVar == "" || senhaVar == "" || pConf == "") {
+           alert('Todos os campos devem ser preenchidos!')
+       } else {
+        fetch("/usuarios/cadastrar", {
+            method: "POST",
+            headers: {
+                "Content-Type": "application/json"
+            },
+            body: JSON.stringify({
+                // crie um atributo que recebe o valor recuperado aqui
+                // Agora vá para o arquivo routes/usuario.js
+                nomeServer: nomeVar,
+                senhaServer: senhaVar
+            })
+            }).then(function (resposta) {
+
+                console.log("resposta: ", resposta);
+
+                if (resposta.ok) {
+                    cardErro.style.display = "block";
+
+                    mensagem_erro.innerHTML = "Cadastro realizado com sucesso! Redirecionando para tela de Login...";
+
+                    setTimeout(() => {
+                        window.location = "login.html";
+                    }, "2000")
+                    
+                    limparFormulario();
+                    finalizarAguardar();
+                } else {
+                    throw ("Houve um erro ao tentar realizar o cadastro!");
+                }
+            }).catch(function (resposta) {
+                console.log(`#ERRO: ${resposta}`);
+                finalizarAguardar();
+            });
+
+            return false;
+        }
+
+        function sumirMensagem() {
+            cardErro.style.display = "none"
+        }
     }
+    
 </script>
