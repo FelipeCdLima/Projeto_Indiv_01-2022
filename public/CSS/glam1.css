@@ -78,6 +78,15 @@ a {
     margin-left: 10%;
     margin-right: 10%;
     flex-direction: column;
+    align-items: center;
+}
+
+.centralImg{
+    width: 100%;
+}
+
+.icon {
+    width: 64px;
 }
 
 .cont2{
@@ -100,7 +109,7 @@ a {
     display: flex;
     justify-content: center;
     line-height: 5vh;
-    border: dashed pink 3px;
+    border: solid #daa520 2px;
 }
 
 .row { /*Animations and Transitions CSS*/
@@ -130,16 +139,27 @@ a {
     justify-content: center;
 }
 
+.cont4 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
 .UmbralIceGuide {
-    border: dashed cyan 3px;
+    /*border: dashed cyan 3px;*/
     width: 45%;
-    height: 700px;
+    /*height: 700px;*/
+    background-color: #a1d1ecb4;
+    padding: 2%;
+    color: #ffffff;
 }
 
 .AstralFireGuide {
-    border: dashed orange 3px;
+    /*border: dashed orange 3px;*/
     width: 45%;
-    height: 700px;
+    /*height: 700px;*/
+    background-color: #dd371ac4;
+    padding: 2%;
 }
 
 .GuideFloatText {
@@ -168,7 +188,6 @@ a {
 }
 
 .loginCard button {
-    width: 20%;
     height: 15%;
     border: #daa520 2px solid;
     margin: 4%;
@@ -183,7 +202,7 @@ a {
     align-items: center;
 }
 
-.loginCard input {
+.cell input {
     background: transparent;
     border: none;
     border-bottom: #daa520 2px solid;
@@ -194,6 +213,90 @@ a {
     text-align: center;
 }
 
+.loginCard input:focus {
+    outline: none;
+}
+
+.cadCard {
+    background-color: rgb(24, 24, 24);
+    height: 90vh; width: 30vw;
+    border-radius: 2%;
+    margin: 6vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.cadCard button {
+    height: 10%;
+    border: #daa520 2px solid;
+    margin: 4%;
+    background-color: rgb(15, 15, 15);
+    color: #daa520;
+    border-radius: 5%;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+.cadCard .cell {
+    border: none;
+    align-items: center;
+}
+
 .cell button {
     width: 50%;
+    height: 15%;
+}
+
+.centralize {
+    align-items: center;
+}
+
+.foguinho {
+    color: #f75b47;
+}
+.gelinho {
+    color: #86f7f7;
+}
+
+.mp{
+    color: #9b3ef1;
+}
+
+#fire4basic span {
+    color: #6b69f3;
+    border-bottom: #6b69f3 solid 2px;
+}
+
+.cont2 img{
+    box-shadow: 4px 4px 4px #000000af;
+}
+
+.highlight:hover {
+    background-color: rgb(70, 70, 70);
+    border: #e2b84d solid 2px;
+}
+
+#gBasicHover:hover {
+    background-image: url("https://cdn.discordapp.com/attachments/585890183870677006/978689514954444870/e05e1f516840302dea6e11d71db67147_-_best-jobs-final-fantasy_2.jpg");
+}
+
+#gInterHover:hover {
+    background-image: url("");
+}
+
+#gAdvHover:hover {
+    background-image: url("");
+}
+
+#gYshtola:hover {
+    background-image: url("");
+}
+
+#gConcept:hover {
+    background-image: url("");
+}
+
+#gChara:hover {
+    background-image: url("");
 }

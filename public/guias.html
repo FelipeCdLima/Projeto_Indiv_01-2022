@@ -60,34 +60,141 @@
     </div>
 
     <div class="container cont2">
-        <div class="rowtitle" onclick="showB()">
+        <div class="rowtitle highlight" onclick="showB()" id="gBasicHover">
             <h2>Guia Básico</h2>
         </div>
-        <div class="rowtitle" onclick="showI()">
+        <div class="rowtitle highlight" onclick="showI()" id="gInterHover">
             <h2>Guia Intermediário</h2>
         </div>
-        <div class="rowtitle" onclick="showA()">
+        <div class="rowtitle highlight" onclick="showA()" id="gAdvHover">
             <h2>Guia Avançado</h2>
         </div>
     </div>
 
-    <div class="container cont1" id="contBasico">
+    <div class="container cont1" id="contBasico" style="display: flex;">
         <div class="cont2">
-            <div class="rowtitle GuideFloatText">
-                <h2>Introdução</h2>
-                <span>A classe funciona na seguinte forma: usar Magias de Fogo para causar dano e gastar toda sua mana (MP), e usar Magias
-                    de Gelo para recuperar seu MP de volta e repetir o ciclo. Quando conjurar magias de Fogo ou Gelo, o jogador transita
-                    entre as fases de Astral Fire (Fogo) e Umbral Ice (Gelo).
+            <div class="rowtitle GuideFloatText cell">
+                <h2>Guia básico</h2>
+                <span>A classe opera transitando entre <span class="gelinho">Gelo</span> e <span class="foguinho">Fogo</span>, alternando entre causar dano e recuperar seus
+                    recursos. Quase como uma dança, tentando manter-se mais tempo possível na fase de <span class="foguinho">fogo</span> e o mínimo
+                    possível na fase de <span class="gelinho">gelo</span>. O guia básico irá te instruir em como operar a classe de forma eficiente
+                    até o nível 60.
                 </span>
             </div>
         </div>
-        
+        <div class="container cont1 GuideFloatText">
+            <div class="rowtitle GuideFloatText cell">
+                <span>Esta é sua "Job Gauge", também chamada de "Elemental Gauge". Toda vez que você lança certas magias de <span class="foguinho">fogo</span> você 
+                    ganha cristais de <span class="foguinho">fogo</span>, e toda vez que lança certas magias de <span class="gelinho">gelo</span>, cristais de <span class="gelinho">gelo</span>. Cada cristal de <span class="foguinho">fogo</span> 
+                    aumenta o dano de suas magias de <span class="foguinho">fogo</span> em 10%, e cada cristal de <span class="gelinho">gelo</span> faz você recuperar <span class="mp">MP</span> mais rápido. No ínicio
+                    de sua jornada, para alternar entre <span class="foguinho">fogo</span> e <span class="gelinho">gelo</span>, recomenda-se utilizar da habilidade Transpose.
+                </span>
+            </div>
+            <img src="https://img.finalfantasyxiv.com/lds/promo/h/w/Z03Sg2XYJTWKHwN-zb60RIYYF4.png" class="centralImg">
+        </div>
+        <div class="cont2">
+            <div class="rowtitle GuideFloatText centralize cell">
+                <h2>Transpose</h2>
+                <img src="https://img.finalfantasyxiv.com/lds/d/11343c230e7ebd41588ca8f684cb99ee13809398.png" class="icon">
+                <span>E por falar nela, esta é a Transpose. Ela serve para alternar entre <span class="gelinho">gelo</span> e <span class="foguinho">fogo</span> sem ter que lançar 
+                    uma magia do elemento oposto, porém ela transfere apenas UM cristal, independente de quantos tiver
+                    quando usá-la. A idéia é que você utilize a Transpose depois de ficar sem <span class="mp">MP</span> na fase de <span class="foguinho">fogo</span> e depois 
+                    de recuperar sua <span class="mp">MP</span> na fase de <span class="gelinho">gelo</span>, assim você evita lançar magias desnecessárias ou lançar magias sem
+                    os cristais para aumentar seu dano.
+                </span>
+            </div>
+        </div><br><br><br>
+        <div class="rowtitle cell">
+            <h2>Fases Elementais</h2>
+        </div>
         <div class="cont2">
             <div class="UmbralIceGuide" id="UmbralIceB">
-            
+                <h2>Umbral Ice</h2>
+                <p>A fase de <span class="gelinho">gelo</span> é onde você irá recuperar seu <span class="mp">MP</span> para poder lançar mais magias de <span class="foguinho">fogo</span>:</p>
+                <div id="bliz1basic">
+                    <h3>BLIZZARD I</h3>
+                    <img src="https://img.finalfantasyxiv.com/lds/d/dab74d4a196c546228d67c91db4bde70c32c45df.png">
+                    <p>Já no nível 1 você tem acesso a sua primeira magia de <span class="gelinho">gelo</span>, ela será essencial para recuperar <span class="mp">MP</span> 
+                        até que atinja o nível 35.
+                    </p>
+                </div><br>
+                <div id="bliz2basic">
+                    <h3>BLIZZARD II</h3>
+                    <img src="https://img.finalfantasyxiv.com/lds/d/af68a6b262379df65a5b4bd0408fafbfd3feb450.png">
+                    <p>A partir do nível 12 você ganha acesso à versão AoE, ou seja, a versão em área do BLIZZARD I, com ela
+                        você é capaz de causar mais dano quando há vários inimigos juntos. Recomenda-se que utilize esta magia a partir do
+                        terceiro alvo, equanto dois alvos seu dano ainda é maior utilizando apenas BLIZZARD I. Esta magia também permite que você troque de fogo para <span class="gelinho">gelo</span> sem utilizar a Transpose, 
+                        o que facilita e agiliza a rotação da classe.
+                    </p>
+                </div><br>
+                <div id="bliz3basic">
+                    <h3>BLIZZARD III</h3>
+                    <img src="https://img.finalfantasyxiv.com/lds/d/6dbb819d3f64b93d6f6ffa23a73101c79592ae2f.png">
+                    <p>
+                        A partir do nível 35, e após concluir a missão de classe correspondente, esta magia irá substituir a BLIZZARD II para quando você tiver apenas 1 alvo. 
+                        Você irá utilizar o BLIZZARD III para transitar do <span class="foguinho">fogo</span> para o <span class="gelinho">gelo</span>, porém você não deve lançar esta magia dentro da fase de <span class="gelinho">gelo</span>! Ela irá demorar 3.5 segundos para ser lançada!
+                        Utilize ela apenas para trocar de <span class="foguinho">fogo</span> para <span class="gelinho">gelo</span>!
+                    </p>
+                </div><br>
+                <div id="freezebasic">
+                    <h3>Freeze</h3>
+                    <img src="https://img.finalfantasyxiv.com/lds/d/2190c4a6ebb204b010020af62a99b1829185aa21.png">
+
+                </div>
             </div>
             <div class="AstralFireGuide" id="AstralFireB">
-    
+                <h2>Astral Fire</h2>
+                <p>É aqui que você vai causar a mior parte de seu dano com esta classe:</p>
+                <div id="fire1basic">
+                    <h3>FIRE I</h3>
+                    <img src="https://img.finalfantasyxiv.com/lds/d/0f0b18de207de52d394b2ca8cb990a38e96587e0.png">
+                    <p>Já no nível 2 você ganha acesso a sua primeira magia de <span class="foguinho">fogo</span>, ela será a sua fonte de dano principal até o nível 60.</p>
+                </div><br>
+                <div id="fire2basic">
+                    <h3>FIRE II</h3>
+                    <img src="https://img.finalfantasyxiv.com/lds/d/8876f1b3cf116acf7138253e0193396c75698651.png">
+                    <p>A partir do nível 18 você ganha acesso à versão AoE, ou seja, a versão em área do FIRE I, com ela você é capaz de causar mais
+                        dano quando há vários inimigos juntos. Recomenda-se que use esta magia a partir do terceiro alvo, enquanto dois alvos seu dano
+                        ainda é maior utilizando apenas FIRE I. Esta magia também permite que você troque de <span class="gelinho">gelo</span> para <span class="foguinho">fogo</span> sem utilizar a Transpose, 
+                        o que facilita e agiliza a rotação da classe.
+                    </p>
+                </div><br><br>
+                <div id="fire3basic">
+                    <h3>FIRE III</h3>
+                    <img src="https://img.finalfantasyxiv.com/lds/d/3ff8dcabba57f6a697d5a86fc7490884b74eddff.png">
+                    <p>A partir do nível 35 esta magia irá substituir a FIRE II para quando você tiver apenas 1 alvo. Você irá utilizar o FIRE III para transitar do <span class="gelinho">gelo</span> para 
+                        o <span class="foguinho">fogo</span>, porém você não deve lançar esta magia dentro da fase de <span class="foguinho">fogo</span>! Não só ela irá demorar 3.5 segundos para ser lançada, ela custará absurdamente mais <span class="mp">MP</span>!
+                        Utilize ela apenas para trocar de <span class="gelinho">gelo</span> para <span class="foguinho">fogo</span>!
+                    </p>
+                </div><br>
+                <div id="firestarterbasic">
+                    <h3>FIRESTARTER</h3>
+                    <img src="https://img.finalfantasyxiv.com/lds/d/eba9b84751761d8b1a31d917f098c8b1843f8572.png">
+                    <p>A partir do nível 42 todo FIRE I que você lançar terá 40% de chance de conceder o efeito "firestarter", este efeito
+                         permite que você lance FIRE III sem o custo de <span class="mp">MP</span> e com tempo de lançamento instantâneo.
+                         Este efeito será o maior causador de dano em alvo único da classe até o nível 60. Lançar o maior número de FIRE III através
+                         dos "firestarters" é o foco da classe até o nível 60.
+                    </p>
+                </div><br>
+                <div id="flarebasic">
+                    <h3>FLARE</h3>
+                    <img src="https://img.finalfantasyxiv.com/lds/d/a2d60b093374b2c896487aba2e32eb8bd32eee7c.png">
+                    <p>Ao atingir o nível 50 você receberá seu primeiro "finalizador". Flare é uma magia que gasta todo seu <span class="mp">MP</span> 
+                        restante para causar grande dano em área, seu tempo de lançamento é maior porém seu dano compensa. É necessário ter pelo menos
+                        800 de <span class="mp">MP</span> para poder lançá-la, então lembre-se de guardar pelo menos isso para conseguir lançá-la ao final de sua
+                        fase de <span class="foguinho">fogo</span>.
+
+                    </p>
+                </div><br>
+                <div id="fire4basic">
+                    <h3>FIRE IV</h3>
+                    <img src="https://img.finalfantasyxiv.com/lds/d/1a353ade6d0e1ff5828cca6b4bbc11c9f52618bb.png">
+                    <p>Ao atingir o nível 60 você atingiu o marco mais importante para um Black Mage! A partir de agora você pode lançar a magia mais importante 
+                        da classe: FIRE IV. Esta magia é o arroz e feijão da classe, e a partir de agora, o guia básico não será suficiente! Para entender mais 
+                        sobre como a classe irá mudar seguindo em frete, dirija-se ao guia <span onclick="showI()">Intermediário</span>! 
+
+                    </p>
+                </div>
             </div>
         </div>
         

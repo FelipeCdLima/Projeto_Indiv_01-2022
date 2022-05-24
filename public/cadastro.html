@@ -58,5 +58,60 @@
             </ul> 
         </div>
     </div>
+    <div class="container">
+        <div class="cadCard">
+            <div class="cell">
+                <h2>Nome de Usuário</h2>
+                <input type="text">
+            </div>
+            <div class="cell">
+                <h2>Senha</h2>
+                <input type="password" id="pass_inp">
+                <button onclick="passShow1()">Mostrar Senha</button>
+            </div>
+            <div class="cell">
+                <h2>Confirmar Senha</h2>
+                <input type="password" id="passConf_inp">
+                <button onclick="passShow2()">Mostrar Senha</button>
+            </div>
+            <button onclick="verify()">CADASTRAR</button>
+        </div>
+    </div>
 </body>
 </html>
+<script>
+    var show1 = 0;
+    var show2 = 0;
+
+    function passShow1() {
+        var vShow = show1 == 0;
+
+        if (vShow == true) {
+            pass_inp.type = 'text';
+            show1 = 1;
+        } else if (vShow == false) {
+            pass_inp.type = 'password';
+            show1 = 0;
+        } else {
+            alert('Erro em function_Show1()')
+        }
+    }
+
+    function passShow2() {
+        var vShow = show2 == 0;
+
+        if (vShow == true) {
+            passConf_inp.type = 'text';
+            show2 = 1;
+        } else if (vShow == false) {
+            passConf_inp.type = 'password';
+            show2 = 0;
+        } else {
+            alert('Erro em function_Show2()')
+        }
+    }
+
+    function verify() {
+        
+    }
+</script>
