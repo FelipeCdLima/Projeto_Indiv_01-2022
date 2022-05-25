@@ -20,15 +20,3 @@ create table UserToPic (
     userLike int
 );
 
-create table medida (
-	id INT PRIMARY KEY AUTO_INCREMENT,
-	dht11_umidade DECIMAL,
-	dht11_temperatura DECIMAL,
-	luminosidade DECIMAL,
-	lm35_temperatura DECIMAL,
-	chave TINYINT,
-	momento DATETIME,
-	fk_pic INT,
-	FOREIGN KEY (fk_pic) REFERENCES Pictures(idPic)
-);
-

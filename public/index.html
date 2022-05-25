@@ -13,14 +13,14 @@
     <link rel="stylesheet" href="CSS/glam1.css">
 
 </head>
-<body>
+<body onload="validarSessao()">
     <div class="header">
         <div class="container">
             <div class="cont1">
                 <img src="https://ffxiv.gamerescape.com/w/images/5/51/Black_Mage_Icon_3.png" style="height: 10vh;">
                 <h2>BLACK MAGES</h2>
             </div>
-            <ul class="navbar">
+            <ul class="navbar" id="h_nav">
                 <li class="destaque">
                     <a href="index.html">
                         HOME
@@ -51,10 +51,13 @@
                     </a>
                 </li>
         
-                <li>
+                <li id="a_login">
                     <a href="login.html">
                         LOGIN
                     </a>
+                </li>
+                <li>
+                    <button id="h_sair" onclick="limparSessao()">SAIR</button>
                 </li>
             </ul>
         </div>
@@ -101,3 +104,10 @@
     </div> 
 </body>
 </html>
+<script>
+    var nome = sessionStorage.NOME_USUARIO;
+
+    //if (nome != null) {
+    //  navNotLogin.style.display = 'none';
+    //}
+</script>

@@ -46,6 +46,15 @@ a {
     color: #daa520;
 }
 
+.header button {
+    color: #daa520;
+    background: transparent;
+    border: none;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size: 16px;
+    cursor: pointer;
+}
+
 .destaque a{
     color: #f1d488;
 }

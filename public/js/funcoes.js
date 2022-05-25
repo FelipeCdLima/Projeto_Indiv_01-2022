@@ -2,14 +2,21 @@
 function validarSessao() {
     // aguardar();
 
-    var email = sessionStorage.EMAIL_USUARIO;
+    //var email = sessionStorage.EMAIL_USUARIO;
     var nome = sessionStorage.NOME_USUARIO;
 
     var b_usuario = document.getElementById("b_usuario");
+    var h_nav = document.getElementById("h_nav");
+    var a_login = document.getElementById("a_login");
+    var i_nome = document.getElementById("i_nome");
 
-    if (email != null && nome != null) {
+    //email != null && 
+    if (nome != null) {
         // window.alert(`Seja bem-vindo, ${nome}!`);
         b_usuario.innerHTML = nome;
+        h_nav.style.display = 'none';
+        a_login.style.display = none;
+        i_nome.innerHTML = nome;
 
         // finalizarAguardar();
     } else {
