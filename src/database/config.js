@@ -69,3 +69,9 @@ function executar(instrucao) {
 module.exports = {
     executar
 }
+
+// console.log(soma(1));
+
+// function soma(idFoto){
+//     comando = `select sum(userLike) FROM UserToPic WHERE fkPic = ${idFoto}`;
+// }

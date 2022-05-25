@@ -12,7 +12,7 @@
     <link rel="short-cut icon" href="https://ffxiv.gamerescape.com/w/images/8/83/Black_Mage_Icon_7.png">
     <link rel="stylesheet" href="CSS/glam1.css">
 </head>
-<body>
+<body onload="validarSessao()">
     <div class="header">
         <div class="container">
             <div class="cont1">
@@ -44,16 +44,22 @@
                     </a>
                 </li>
         
-                <li>
+                <li id="a_cadastro">
                     <a href="cadastro.html">
                         CADASTRO
                     </a>
                 </li>
         
-                <li>
+                <li id="a_login">
                     <a href="login.html">
                         LOGIN
                     </a>
+                </li>
+                <li>
+                    <span id="b_usuario" class="foguinho">usuario</span>
+                </li>
+                <li>
+                    <button id="b_sair" onclick="limparSessao()">SAIR</button>
                 </li>
             </ul> 
         </div>

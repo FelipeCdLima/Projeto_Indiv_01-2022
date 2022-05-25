@@ -6,21 +6,28 @@ function validarSessao() {
     var nome = sessionStorage.NOME_USUARIO;
 
     var b_usuario = document.getElementById("b_usuario");
-    var h_nav = document.getElementById("h_nav");
+    //var h_nav = document.getElementById("h_nav");
     var a_login = document.getElementById("a_login");
-    var i_nome = document.getElementById("i_nome");
+    //var i_nome = document.getElementById("i_nome");
+    var a_cadastro = document.getElementById("a_cadastro");
+    var b_sair = document.getElementById("b_sair");
 
     //email != null && 
     if (nome != null) {
         // window.alert(`Seja bem-vindo, ${nome}!`);
+        b_usuario.style.display = 'block';
         b_usuario.innerHTML = nome;
-        h_nav.style.display = 'none';
-        a_login.style.display = none;
-        i_nome.innerHTML = nome;
+        //h_nav.style.display = 'none';
+        a_login.style.display = 'none';
+        //i_nome.innerHTML = nome;
+        a_cadastro.style.display = 'none';
+        b_sair.style.display = 'block';
 
         // finalizarAguardar();
     } else {
-        window.location = "../login.html";
+        //window.location = "../login.html";
+        b_usuario.style.display = 'none';
+        b_sair.style.display = 'none';
     }
 }
 

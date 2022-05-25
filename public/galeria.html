@@ -12,7 +12,7 @@
     <link rel="short-cut icon" href="https://ffxiv.gamerescape.com/w/images/8/83/Black_Mage_Icon_7.png">
     <link rel="stylesheet" href="CSS/glam1.css">
 </head>
-<body>
+<body onload="validarSessao()">
     <div class="header">
         <div class="container">
             <div class="cont1">
@@ -44,16 +44,22 @@
                     </a>
                 </li>
         
-                <li>
+                <li id="a_cadastro">
                     <a href="cadastro.html">
                         CADASTRO
                     </a>
                 </li>
         
-                <li>
+                <li id="a_login">
                     <a href="login.html">
                         LOGIN
                     </a>
+                </li>
+                <li>
+                    <span id="b_usuario" class="foguinho">usuario</span>
+                </li>
+                <li>
+                    <button id="b_sair" onclick="limparSessao()">SAIR</button>
                 </li>
             </ul>
         </div>
@@ -66,8 +72,8 @@
         <div class="rowtitle highlight" onclick="show2()" id="gChara">
             <h2>Personagens Black Mages</h2>
         </div>
-        <div class="rowtitle highlight" onclick="show3()" id="gYshtola">
-            <h2>Y'shtola Rhul 💜</h2>
+        <div class="rowtitle highlight" onclick="show3()" id="gComunidade">
+            <h2>Comunidade</h2>
         </div>
     </div>
     <div class="container cont1">
@@ -154,29 +160,53 @@
         <div class="row" id="row6" style="display: none;">
             <div class="cell">
                 <img src="">
-                <p>Y'shtola - A Realm Reborn</p>
+                <p>Auriel Aarin - Zalera</p>
+                <div id="pic1" class="pic">
+                    <img src="https://pngroyale.com/wp-content/uploads/2021/11/Download-emoji-heart-.png">
+                    <span id="like1">0</span>
+                </div>
             </div>
             <div class="cell">
                 <img src="">
-                <p>Y'shtola - Heavensward</p>
+                <p>Guldfryn Glacier - Zalera</p>
+                <div id="pic2" class="pic">
+                    <img src="https://pngroyale.com/wp-content/uploads/2021/11/Download-emoji-heart-.png">
+                    <span id="like2">0</span>
+                </div>
             </div>
             <div class="cell">
                 <img src="">
-                <p>Y'shtola - Shadowbringers</p>
+                <p>Akane Erchim - Malboro</p>
+                <div id="pic3" class="pic">
+                    <img src="https://pngroyale.com/wp-content/uploads/2021/11/Download-emoji-heart-.png">
+                    <span id="like3">0</span>
+                </div>
             </div>
         </div>
         <div class="row" id="row7" style="display: none;">
             <div class="cell">
                 <img src="">
-                <p></p>
+                <p>Yumi Moon - Zalera</p>
+                <div id="pic4" class="pic">
+                    <img src="https://pngroyale.com/wp-content/uploads/2021/11/Download-emoji-heart-.png">
+                    <span id="like4">0</span>
+                </div>
             </div>
             <div class="cell">
                 <img src="">
-                <p></p>
+                <p>Shabadadu Moon - Zalera</p>
+                <div id="pic5" class="pic">
+                    <img src="https://pngroyale.com/wp-content/uploads/2021/11/Download-emoji-heart-.png">
+                    <span id="like5">0</span>
+                </div>
             </div>
             <div class="cell">
                 <img src="">
-                <p></p>
+                <p>Freya White - Zalera</p>
+                <div id="pic6" class="pic">
+                    <img src="https://pngroyale.com/wp-content/uploads/2021/11/Download-emoji-heart-.png" onclick="like6()">
+                    <span id="like6">0</span>
+                </div>
             </div>
         </div>
     </div>
