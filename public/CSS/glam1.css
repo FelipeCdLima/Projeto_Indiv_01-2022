@@ -300,9 +300,10 @@ a {
 }
 
 #gBasicHover:hover {
-    background-image: url("https://cdn.discordapp.com/attachments/585890183870677006/978689514954444870/e05e1f516840302dea6e11d71db67147_-_best-jobs-final-fantasy_2.jpg");
+    /*background-image: url("https://cdn.discordapp.com/attachments/585890183870677006/978689514954444870/e05e1f516840302dea6e11d71db67147_-_best-jobs-final-fantasy_2.jpg");
+    */
     cursor: pointer;
-}
+}   
 
 #gInterHover:hover {
     background-image: url("");
