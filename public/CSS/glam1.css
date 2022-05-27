@@ -301,24 +301,58 @@ a {
 
 #gBasicHover:hover {
     background-image: url("https://cdn.discordapp.com/attachments/585890183870677006/978689514954444870/e05e1f516840302dea6e11d71db67147_-_best-jobs-final-fantasy_2.jpg");
+    cursor: pointer;
 }
 
 #gInterHover:hover {
     background-image: url("");
+    cursor: pointer;
 }
 
 #gAdvHover:hover {
     background-image: url("");
+    cursor: pointer;
 }
 
 #gComunidade:hover {
     background-image: url("");
+    cursor: pointer;
 }
 
 #gConcept:hover {
     background-image: url("");
+    cursor: pointer;
 }
 
 #gChara:hover {
     background-image: url("");
+    cursor: pointer;
+}
+
+.rotation {
+    background-color: rgb(24, 24, 24);
+    width: 800px;
+    /*height: 150px;*/
+    display: flex;
+    /*justify-content: center;*/
+    align-items: center;
+    /*padding-top: 10px; padding-bottom: 10px;*/
+    flex-direction: column;
+
+}
+
+.gcd {
+    height: 64px; width: 64px;
+    margin-left: 15px; margin-right: 15px;
+}
+
+.ogcd {
+    height: 40px; width: 40px;
+    margin-left: 10px; margin-right: 10px;
+}
+
+.cup {
+    display: flex;
+    justify-content: center;
+    padding-top: 10px; padding-bottom: 10px;
 }
