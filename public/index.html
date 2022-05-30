@@ -9,15 +9,16 @@
 
     <script src="js/funcoes.js"></script>
 
-    <link rel="short-cut icon" href="https://ffxiv.gamerescape.com/w/images/8/83/Black_Mage_Icon_7.png">
+    <link rel="short-cut icon" href="assets/BLM/pageIcon.png">
     <link rel="stylesheet" href="CSS/glam1.css">
+    <link rel="stylesheet" href="CSS/carousel.css">
 
 </head>
 <body onload="validarSessao()">
     <div class="header">
         <div class="container">
             <div class="cont1">
-                <a href="index.html"><img src="https://ffxiv.gamerescape.com/w/images/5/51/Black_Mage_Icon_3.png" style="height: 10vh;" onclick="window"></a>
+                <a href="index.html"><img src="assets/BLM/BLM_Icon.png" style="height: 10vh;" onclick="window"></a>
                 <a href="index.html"><h2>BLACK MAGES</h2></a>
             </div>
             <ul class="navbar" id="h_nav">
@@ -66,16 +67,44 @@
         </div>
     </div>
 
-    <!-- Carousel CSS -->
-    <!-- <div class="photoslide"> -->
-        <!-- Slideshow container -->
-
-    <!-- </div> -->
+    <!--Carousel-->
+    <div class="photoslide">
+        <div class="carousel">
+            <button class="b_carousel b_carousel--left is-hidden"><img src="assets/BLM/pointerLeft.png"></button>
+    
+            <div class="carousel_tracker-container">
+                <ul class="carousel_track">
+                    <li class="carousel_slide current_slide" >
+                        <a href="guias.html">
+                            <img class="carousel_img" src="assets/BLM/Covers/GuiasCarousel.png">
+                        </a>
+                    </li>
+                    <li class="carousel_slide">
+                        <a href="rotation.html">
+                            <img class="carousel_img" src="assets/BLM/Covers/RotacaoCarousel.png">
+                        </a>
+                    </li>
+                    <li class="carousel_slide">
+                        <a href="galeria.html">
+                            <img class="carousel_img" src="assets/BLM/Covers/GaleriaCarousel.png">
+                        </a>
+                    </li>
+                </ul>
+            </div>
+    
+            <button class="b_carousel b_carousel--right"><img src="assets/BLM/pointerRight.png"></button>
+            <div class="carousel_nav">
+                <button class="carousel_indicator current_slide"></button>
+                <button class="carousel_indicator"></button>
+                <button class="carousel_indicator"></button>
+            </div>
+        </div>
+    </div>
 
     <div class="container cont1 alo">
         <div class="div_lore">
             <div class="cont5">
-                <img class="imgnoshadow" src="https://i.pinimg.com/originals/5f/0c/ec/5f0cec04bb33c726af53384f2eb75818.png">
+                <img class="imgnoshadow" src="assets/BLM/FF1Logo.png">
             </div>
             <div class="cont4 textbox">
                 <h2>Origem</h2>
@@ -106,10 +135,12 @@
             </p>
             </div>
             <div class="cont5">
-                <img class="imgnoshadow" src="assets/imgs/pngaaa.com-5433492.png">
+                <img class="imgnoshadow" src="assets/BLM/FF14ARRLogo.png">
             </div>
         </div>
     </div> 
+
+    <script src="js/carousel.js"></script>
 </body>
 </html>
 <script>
