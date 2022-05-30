@@ -21,7 +21,7 @@ body {
     justify-content: space-around;
     display: flex;
     margin: auto;
-    /* border: dashed chartreuse 3px; */
+    border: dashed chartreuse 3px;
 }
 
 .cont1 {
@@ -69,23 +69,26 @@ a {
     background-color: rgb(30, 30, 30);
 }
 
-#div_lore {
+.div_lore {
     color: #daa520;
     border-left: 10vw; border-right: 10vw;
     display: flex;
-    flex-direction: column;
+    width: 80vw;
+    justify-content: center;
+    /* flex-direction: column; */
     align-items: center;
     font-size: 4vh;
     padding: 1vw;
+    border: dashed coral 2px;
 
 }
 
-#div_lore h2 {
+.div_lore h2 {
     font-size: 8vh;
 }
 
 .container.cont1 {
-    /* border: dashed red 3px; */
+    border: dashed red 3px;
     width: 80%;
     display: flex;
     margin-left: 10%;
@@ -108,7 +111,7 @@ a {
     display: flex;
     text-align: center;
     justify-content: space-evenly;
-    /* border: dashed blueviolet 3px; */
+    border: dashed blueviolet 3px;
 }
 
 .rowtitle{
@@ -129,7 +132,7 @@ a {
     display: flex;
     justify-content: space-evenly;
     width: 100%;
-    /* border: dashed green 3px; */
+    border: dashed green 3px;
 }
 
 .row img {
@@ -160,7 +163,7 @@ a {
 }
 
 .cont3 {
-    /* border: dashed orangered 3px; */
+    border: dashed orangered 3px;
     display: flex;
     justify-content: center;
 }
@@ -172,7 +175,7 @@ a {
 }
 
 .UmbralIceGuide {
-    /*border: dashed cyan 3px;*/
+    /* border: dashed cyan 3px; */
     width: 45%;
     /*height: 700px;*/
     background-color: #a1d1ecb4;
@@ -181,7 +184,7 @@ a {
 }
 
 .AstralFireGuide {
-    /*border: dashed orange 3px;*/
+    /* border: dashed orange 3px; */
     width: 45%;
     /*height: 700px;*/
     background-color: #dd371ac4;
@@ -294,9 +297,9 @@ a {
     border-bottom: #6b69f3 solid 2px;
 }
 
-.cont2 img{
+/* .cont2 img{
     box-shadow: 4px 4px 4px #000000af;
-}
+} */
 
 .highlight:hover {
     background-color: rgb(70, 70, 70);
@@ -310,27 +313,27 @@ a {
 }   
 
 #gInterHover:hover {
-    background-image: url("");
+    /* background-image: url(""); */
     cursor: pointer;
 }
 
 #gAdvHover:hover {
-    background-image: url("");
+    /* background-image: url(""); */
     cursor: pointer;
 }
 
 #gComunidade:hover {
-    background-image: url("");
+    /* background-image: url(""); */
     cursor: pointer;
 }
 
 #gConcept:hover {
-    background-image: url("");
+    /* background-image: url(""); */
     cursor: pointer;
 }
 
 #gChara:hover {
-    background-image: url("");
+    /* background-image: url(""); */
     cursor: pointer;
 }
 
@@ -349,17 +352,45 @@ a {
 .gcd {
     height: 48px; width: 48px;
     margin-left: 15px; margin-right: 15px;
+    box-shadow: 4px 4px 4px #000000af;
 }
 
 .ogcd {
     height: 30px; width: 30px;
     margin-left: 5px; margin-right: 5px;
+    box-shadow: 4px 4px 4px #000000af;
 }
 
 .cup {
     display: flex;
     justify-content: center;
     padding-top: 10px; padding-bottom: 10px;
-    /* border: dashed crimson 2px; */
+    border: dashed crimson 2px;
     width: 100%;
+}
+
+.textbox {
+    display: flex;
+    flex-direction: column;
+    width: 50vw;
+}
+
+.imgnoshadow {
+    box-shadow: none;
+}
+
+.alo {
+    justify-content: space-around;
+}
+
+.cont5 {
+    margin-left: 5%;
+    margin-right: 5%;
+    display: flex;
+    text-align: center;
+    border: dashed lime 3px;
+}
+
+.cont5 img {
+    width: 540px;
 }
