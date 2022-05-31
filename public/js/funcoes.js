@@ -66,3 +66,6 @@ function fecharModal() {
     divModal.style.display = "none";
 }
 
+function mostrarLikes() {
+    
+}

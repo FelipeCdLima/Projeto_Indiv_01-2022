@@ -347,7 +347,7 @@ a {
 
 .rotation {
     background-color: rgb(24, 24, 24);
-    width: 800px;
+    width: 80vw;
     /*height: 150px;*/
     display: flex;
     /* justify-content: center; */
@@ -382,9 +382,18 @@ a {
 .cup {
     display: flex;
     justify-content: center;
-    padding-top: 10px; padding-bottom: 10px;
-    border: dashed crimson 2px;
+    padding-top: 10px; padding-bottom: 5px;
+    /* border: dashed crimson 2px; */
     width: 100%;
+}
+
+.cup .startRotation {
+    width: 48px; height: 48px;
+}
+
+.rotationDirection {
+    width: 30px; height: 30px;
+    margin-top: 1%;
 }
 
 .textbox {

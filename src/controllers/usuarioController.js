@@ -76,6 +76,10 @@ function cadastrar(req, res) {
         usuarioModel.cadastrar(nome, senha)
             .then(
                 function (resultado) {
+                    console.log(resultado.insertId);
+
+                    usuarioModel.cadastrarFtUser(resultado.insertId);
+
                     res.json(resultado);
                 }
             ).catch(
