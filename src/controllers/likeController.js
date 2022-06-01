@@ -17,6 +17,27 @@ function getLikes(req, res) {
     );
 }
 
+function knowLike1(req, res) {
+    var idUser = sessionStorage.ID_USUARIO;
+
+    likeModel.knowLike1(idUser)
+    .then(function (resultado) {
+        if (resultado == 0) {
+            
+        } else if (resultado == 1) {
+            
+        } else {
+            console.log("ERRO NO QUERY KNOWLIKE1");
+        }
+    })
+}
+
 module.exports = {
-    getLikes
+    getLikes,
+    knowLike1,
+    knowLike2,
+    knowLike3,
+    knowLike4,
+    knowLike5,
+    knowLike6
 }

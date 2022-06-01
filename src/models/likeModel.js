@@ -15,6 +15,22 @@ function getLikes() {
     return database.executar(instrucao);
 }
 
+function knowLike1(idUser) {
+    console.log("ACESSEI O LIKE MODEL")
+    var instrucao = `
+    select userLike as 'like1' from UserToPic, userTable where fkPic = 1 and fkUser = idUser and fkUser = ${idUser};
+    `;
+
+    console.log("Executando a instrução SQL: \n" + instrucao);
+    return database.executar(instrucao);
+}
+
 module.exports = {
-    getLikes
+    getLikes,
+    knowLike1,
+    knowLike2,
+    knowLike3,
+    knowLike4,
+    knowLike5,
+    knowLike6
 }

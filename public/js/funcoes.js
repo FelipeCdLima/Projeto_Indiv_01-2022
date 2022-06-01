@@ -30,19 +30,19 @@ function validarSessao() {
         a_cadastro.style.display = 'none';
         b_sair.style.display = 'block';
 
-        ima1.onclick = like1();
-        ima2.onclick = like2();
-        ima3.onclick = like3();
-        ima4.onclick = like4();
-        ima5.onclick = like5();
-        ima6.onclick = like6();
+        ima1.onclick = darLike1;
+        ima2.onclick = darLike2;
+        ima3.onclick = darLike3;
+        ima4.onclick = darLike4;
+        ima5.onclick = darLike5;
+        ima6.onclick = darLike6;
 
         // finalizarAguardar();
     } else {
         //window.location = "../login.html";
         b_usuario.style.display = 'none';
         b_sair.style.display = 'none';
-        
+
         ima1.onclick ='';
         ima2.onclick ='';
         ima3.onclick ='';
@@ -96,7 +96,7 @@ function mostrarLikes() {
             "Content-Type": "application/json"
         }
     }).then(function (resposta) {
-        console.log("ESTOU NO THEN DO entrar()!")
+        console.log("ESTOU NO THEN DO mostrarLikes()!")
 
         if (resposta.ok) {
 
@@ -136,5 +136,20 @@ function mostrarLikes() {
 }
 
 function darLike1() {
-    
+    console.log('Dei Like na 1ª IMG')
+}
+function darLike2() {
+    console.log('Dei Like na 2ª IMG')
+}
+function darLike3() {
+    console.log('Dei Like na 3ª IMG')
+}
+function darLike4() {
+    console.log('Dei Like na 4ª IMG')
+}
+function darLike5() {
+    console.log('Dei Like na 5ª IMG')
+}
+function darLike6() {
+    console.log('Dei Like na 6ª IMG')
 }
