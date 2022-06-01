@@ -67,5 +67,53 @@ function fecharModal() {
 }
 
 function mostrarLikes() {
+    //dar select nos likes
+    
+    fetch("/likes/mostrar", {
+        method: "POST",
+        headers: {
+            "Content-Type": "application/json"
+        }
+    }).then(function (resposta) {
+        console.log("ESTOU NO THEN DO entrar()!")
+
+        if (resposta.ok) {
+
+            resposta.json().then(json => {
+                console.log(json[0].Like1);
+                var like1 = document.getElementById("like1");
+                like1.innerHTML = json[0].Like1;
+                var like2 = document.getElementById("like2");
+                like2.innerHTML = json[0].Like2;
+                var like3 = document.getElementById("like3");
+                like3.innerHTML = json[0].Like3;
+                var like4 = document.getElementById("like4");
+                like4.innerHTML = json[0].Like4;
+                var like5 = document.getElementById("like5");
+                like5.innerHTML = json[0].Like5;
+                var like6 = document.getElementById("like6");
+                like6.innerHTML = json[0].Like6;
+                
+            });
+        } else {
+
+            console.log("Houve um erro ao tentar realizar o login!");
+
+            resposta.text().then(texto => {
+                console.error(texto);
+                finalizarAguardar(texto);
+            });
+        }
+
+    }).catch(function (erro) {
+        console.log(erro);
+    })
+
+
+    //mandar os likes[x] como parâmetro
+    //no html function(like1,like2...) setar os #likeX como likeX
+}
+
+function darLike() {
     
 }
