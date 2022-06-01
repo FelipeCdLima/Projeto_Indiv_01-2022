@@ -19,10 +19,7 @@ create table UserToPic (
     foreign key (fkUser) references userTable (idUser),
     userLike int
 );
-    
-insert into UserTable (userName, userPassword) values
-('Gelato', '1234'),('Tama', '1234'),('ShindoL', '2222');
-    
+        
 insert into Pictures (idPic, picName) values
 	(1, 'Auriel'),
     (2, 'Guldfryn'),
@@ -30,6 +27,9 @@ insert into Pictures (idPic, picName) values
     (4, 'Yumi'),
     (5, 'Shaba'),
     (6, 'Avri');
+
+-- insert into UserTable (userName, userPassword) values
+--     ('Gelato', '1234'),('Tama', '1234'),('ShindoL', '2222');
     
 -- insert into UserToPic (fkPic, fkUser, userLike) values
 -- 	(1, 1, 1), (2, 1, 0), (3, 1, 1), (4, 1, 0), (5, 1, 0), (6, 1, 0),

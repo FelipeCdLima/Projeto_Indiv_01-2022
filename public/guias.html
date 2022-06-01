@@ -72,7 +72,7 @@
         <div class="rowtitle highlight" onclick="showI()" id="gInterHover">
             <h2>Guia Intermediário</h2>
         </div>
-        <div class="rowtitle highlight" onclick="showA()" id="gAdvHover">
+        <div class="rowtitle highlight" onclick="GuiaNaoLogado()" id="gAdvHover">
             <h2>Guia Avançado</h2>
         </div>
     </div>
@@ -205,18 +205,31 @@
         </div>
         
     </div>
+
+    <div class="container cont1" id="contAdvanced" style="display: none;">
+
+    </div>
 </body>
 </html>
 <script>
     function showB() {
-        
+        contBasico.style.display = 'flex';
+        contAdvanced.style.display = 'none';
     }
 
     function showI() {
         
     }
 
-    function showA() {
-        
+    function GuiaNaoLogado() {
+        console.log("NÃO LOGADO")
+        contBasico.style.display = 'none';
+        contAdvanced.style.display = 'flex';
+    }
+
+    function GuiaLogado() {
+        console.log("LOGADO")
+        contBasico.style.display = 'none';
+        contAdvanced.style.display = 'flex';
     }
 </script>

@@ -12,6 +12,8 @@ function validarSessao() {
     var a_cadastro = document.getElementById("a_cadastro");
     var b_sair = document.getElementById("b_sair");
 
+    var gAdvHover = document.getElementById("gAdvHover");
+
     var ima1 = document.getElementById("ima1");
     var ima2 = document.getElementById("ima2");
     var ima3 = document.getElementById("ima3");
@@ -30,6 +32,8 @@ function validarSessao() {
         a_cadastro.style.display = 'none';
         b_sair.style.display = 'block';
 
+        gAdvHover.onclick = GuiaLogado;
+
         ima1.onclick = darLike1;
         ima2.onclick = darLike2;
         ima3.onclick = darLike3;
@@ -43,12 +47,14 @@ function validarSessao() {
         b_usuario.style.display = 'none';
         b_sair.style.display = 'none';
 
-        ima1.onclick ='';
-        ima2.onclick ='';
-        ima3.onclick ='';
-        ima4.onclick ='';
-        ima5.onclick ='';
-        ima6.onclick ='';
+        gAdvHover.onclick = GuiaNaoLogado;
+
+        ima1.onclick =nadaAcontece;
+        ima2.onclick =nadaAcontece;
+        ima3.onclick =nadaAcontece;
+        ima4.onclick =nadaAcontece;
+        ima5.onclick =nadaAcontece;
+        ima6.onclick =nadaAcontece;
     }
 }
 
@@ -75,6 +81,9 @@ function finalizarAguardar(texto) {
     }
 }
 
+function nadaAcontece() {
+    //Eis que nada acontece.... feijoada...
+}
 
 // modal
 function mostrarModal() {

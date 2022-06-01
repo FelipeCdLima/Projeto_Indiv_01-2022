@@ -27,10 +27,10 @@ function knowLike1(idUser) {
 
 module.exports = {
     getLikes,
-    knowLike1,
-    knowLike2,
-    knowLike3,
-    knowLike4,
-    knowLike5,
-    knowLike6
+    knowLike1
+    // knowLike2,
+    // knowLike3,
+    // knowLike4,
+    // knowLike5,
+    // knowLike6
 }

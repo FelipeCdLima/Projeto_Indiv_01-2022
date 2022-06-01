@@ -22,22 +22,26 @@ function knowLike1(req, res) {
 
     likeModel.knowLike1(idUser)
     .then(function (resultado) {
-        if (resultado == 0) {
-            
-        } else if (resultado == 1) {
-            
-        } else {
-            console.log("ERRO NO QUERY KNOWLIKE1");
+        if (resultado > 0) {
+            res.status(200).json(resultado);
+        }else {
+            res.status(204).send("Nenhum resultado encontrado!")
         }
-    })
+    }).catch(
+        function (erro) {
+            console.log(erro);
+            console.log("Houve um erro ao realizar a consulta! Erro: ", erro.sqlMessage);
+            res.status(500).json(erro.sqlMessage);
+        }
+    );
 }
 
 module.exports = {
     getLikes,
-    knowLike1,
-    knowLike2,
-    knowLike3,
-    knowLike4,
-    knowLike5,
-    knowLike6
+    knowLike1
+    // knowLike2,
+    // knowLike3,
+    // knowLike4,
+    // knowLike5,
+    // knowLike6
 }
