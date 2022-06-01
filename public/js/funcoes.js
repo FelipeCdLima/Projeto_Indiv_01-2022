@@ -12,6 +12,13 @@ function validarSessao() {
     var a_cadastro = document.getElementById("a_cadastro");
     var b_sair = document.getElementById("b_sair");
 
+    var ima1 = document.getElementById("ima1");
+    var ima2 = document.getElementById("ima2");
+    var ima3 = document.getElementById("ima3");
+    var ima4 = document.getElementById("ima4");
+    var ima5 = document.getElementById("ima5");
+    var ima6 = document.getElementById("ima6");
+
     //email != null && 
     if (nome != null) {
         // window.alert(`Seja bem-vindo, ${nome}!`);
@@ -23,11 +30,25 @@ function validarSessao() {
         a_cadastro.style.display = 'none';
         b_sair.style.display = 'block';
 
+        ima1.onclick = like1();
+        ima2.onclick = like2();
+        ima3.onclick = like3();
+        ima4.onclick = like4();
+        ima5.onclick = like5();
+        ima6.onclick = like6();
+
         // finalizarAguardar();
     } else {
         //window.location = "../login.html";
         b_usuario.style.display = 'none';
         b_sair.style.display = 'none';
+        
+        ima1.onclick ='';
+        ima2.onclick ='';
+        ima3.onclick ='';
+        ima4.onclick ='';
+        ima5.onclick ='';
+        ima6.onclick ='';
     }
 }
 
@@ -93,7 +114,7 @@ function mostrarLikes() {
                 like5.innerHTML = json[0].Like5;
                 var like6 = document.getElementById("like6");
                 like6.innerHTML = json[0].Like6;
-                
+            
             });
         } else {
 
@@ -114,6 +135,6 @@ function mostrarLikes() {
     //no html function(like1,like2...) setar os #likeX como likeX
 }
 
-function darLike() {
+function darLike1() {
     
 }

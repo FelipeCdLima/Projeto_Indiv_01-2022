@@ -5,6 +5,10 @@ body {
     color: #daa520;
 }
 
+button {
+    cursor: pointer;
+}
+
 .header {
     height: 12vh;
     width: 100%;
