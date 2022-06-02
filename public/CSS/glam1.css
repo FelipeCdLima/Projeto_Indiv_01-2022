@@ -156,6 +156,7 @@ a {
     flex-direction: column;
     text-align: center;
     margin: 0.8%;
+    border-radius: 10px;
     border: solid #daa520 0.2vw;
     width: 25vw;
 }

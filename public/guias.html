@@ -72,7 +72,7 @@
         <div class="rowtitle highlight" onclick="showI()" id="gInterHover">
             <h2>Guia Intermediário</h2>
         </div>
-        <div class="rowtitle highlight" onclick="GuiaNaoLogado()" id="gAdvHover">
+        <div class="rowtitle highlight" onclick="showA()" id="gAdvHover">
             <h2>Guia Avançado</h2>
         </div>
     </div>
@@ -212,6 +212,7 @@
 </body>
 </html>
 <script>
+    var idUser = sessionStorage.ID_USUARIO;
     function showB() {
         contBasico.style.display = 'flex';
         contAdvanced.style.display = 'none';
@@ -221,15 +222,19 @@
         
     }
 
-    function GuiaNaoLogado() {
-        console.log("NÃO LOGADO")
-        contBasico.style.display = 'none';
-        contAdvanced.style.display = 'flex';
-    }
+    function showA() {
 
-    function GuiaLogado() {
-        console.log("LOGADO")
-        contBasico.style.display = 'none';
-        contAdvanced.style.display = 'flex';
+        if (idUser == null) {
+            console.log("NÃO LOGADO")
+            contBasico.style.display = 'none';
+            contAdvanced.style.display = 'flex';
+        } else if (idUser != null) {
+            console.log("LOGADO")
+            contBasico.style.display = 'flex';
+            contAdvanced.style.display = 'none';
+        } else {
+            console.log("ERRO NO ID_USER AT sessionStorage")
+        }
+        
     }
 </script>

@@ -32,7 +32,7 @@ function validarSessao() {
         a_cadastro.style.display = 'none';
         b_sair.style.display = 'block';
 
-        gAdvHover.onclick = GuiaLogado;
+        // gAdvHover.onclick = GuiaLogado;
 
         ima1.onclick = darLike1;
         ima2.onclick = darLike2;
@@ -96,6 +96,162 @@ function fecharModal() {
     divModal.style.display = "none";
 }
 
+
+
+function darLike1() {
+    console.log('Clickei na 1ª IMG')
+    idUser = sessionStorage.getItem('ID_USUARIO');
+    var pic = 1;
+
+    fetch("/likes/darLike1", {
+        method: "POST",
+        headers: {
+            "Content-Type": "application/json"
+        },
+        body: JSON.stringify({
+            idServer: idUser
+        })
+    }).then(function (resposta) {
+        console.log("ESTOU NO THEN DO darLike1()!")
+
+        if (resposta.ok) {
+
+            // console.log(resposta);
+
+            resposta.json().then(json => {
+                // console.log(json);
+                // console.log(JSON.stringify(json));
+                // console.log(json[0].Like1);
+                
+                if (json[0].Like1 == 0) {
+
+                    updateLike(idUser, pic)
+                    
+                    // setTimeout(updateLike(idUser, pic), 2000);
+                    // setTimeout(mostrarLikes(), 2000);
+
+                } else if (json[0].Like1 == 1) {
+                    updateDeslike(idUser, pic);
+                    
+                } else {
+                    console.log("ERRO NA VERIFICAÇÃO DE 1 OU 0")
+                }
+            }); 
+            
+            setTimeout(() => mostrarLikes(),3000)
+
+        } else {
+
+            console.log("Houve um erro na FUNC darLike1");
+
+            resposta.text().then(texto => {
+                console.error(texto);
+                // finalizarAguardar(texto);
+            });
+        }
+
+    }).catch(function (erro) {
+        console.log(erro);
+    })
+}
+function darLike2() {
+    // console.log('Clickei na 2ª IMG')
+}
+function darLike3() {
+    // console.log('Clickei na 3ª IMG')
+}
+function darLike4() {
+    // console.log('Clickei na 4ª IMG')
+}
+function darLike5() {
+    // console.log('Clickei na 5ª IMG')
+}
+function darLike6() {
+    // console.log('Clickei na 6ª IMG')
+}
+
+async function updateLike(idUser, pic) {
+    console.log("Dando UPDATE LIKE")
+
+    fetch("/likes/updateLike", {
+        method: "POST",
+        headers: {
+            "Content-Type": "application/json"
+        },
+        body: JSON.stringify({
+            idUpdate: idUser,
+            idPic: pic
+        })
+    }).then(function (resposta) {
+        console.log("ESTOU NO THEN DO updateLike()!")
+
+        if (resposta.ok) {
+
+            // console.log(resposta);
+
+            resposta.json().then(json => {
+                // console.log(json);
+                // console.log(JSON.stringify(json));
+                // console.log(json[0].Like1);
+                
+            });
+        } else {
+
+            console.log("Houve um erro na FUNC updateLike");
+
+            resposta.text().then(texto => {
+                console.error(texto);
+                // finalizarAguardar(texto);
+            });
+        }
+
+    }).catch(function (erro) {
+        console.log(erro);
+    })
+
+}
+
+async function updateDislike(idUser, pic) {
+    console.log("Dando UPDATE DISLIKE")
+
+    fetch("/likes/updateDislike", {
+        method: "POST",
+        headers: {
+            "Content-Type": "application/json"
+        },
+        body: JSON.stringify({
+            idUpdate: idUser,
+            idPic: pic
+        })
+    }).then(function (resposta) {
+        console.log("ESTOU NO THEN DO updateLike()!")
+
+        if (resposta.ok) {
+
+            console.log(resposta);
+
+            resposta.json().then(json => {
+                console.log(json);
+                console.log(JSON.stringify(json));
+                // console.log(json[0].Like1);
+                
+            });
+        } else {
+
+            console.log("Houve um erro na FUNC updateLike");
+
+            resposta.text().then(texto => {
+                console.error(texto);
+                // finalizarAguardar(texto);
+            });
+        }
+
+    }).catch(function (erro) {
+        console.log(erro);
+    })
+
+}
+
 function mostrarLikes() {
     //dar select nos likes
     
@@ -110,6 +266,7 @@ function mostrarLikes() {
         if (resposta.ok) {
 
             resposta.json().then(json => {
+                // console.log((json[0].Like1).length);
                 console.log(json[0].Like1);
                 var like1 = document.getElementById("like1");
                 like1.innerHTML = json[0].Like1;
@@ -127,7 +284,7 @@ function mostrarLikes() {
             });
         } else {
 
-            console.log("Houve um erro ao tentar realizar o login!");
+            console.log("Houve um erro ao tentar mostrar!");
 
             resposta.text().then(texto => {
                 console.error(texto);
@@ -139,26 +296,4 @@ function mostrarLikes() {
         console.log(erro);
     })
 
-
-    //mandar os likes[x] como parâmetro
-    //no html function(like1,like2...) setar os #likeX como likeX
-}
-
-function darLike1() {
-    console.log('Dei Like na 1ª IMG')
-}
-function darLike2() {
-    console.log('Dei Like na 2ª IMG')
-}
-function darLike3() {
-    console.log('Dei Like na 3ª IMG')
-}
-function darLike4() {
-    console.log('Dei Like na 4ª IMG')
-}
-function darLike5() {
-    console.log('Dei Like na 5ª IMG')
-}
-function darLike6() {
-    console.log('Dei Like na 6ª IMG')
 }

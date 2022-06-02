@@ -1,7 +1,7 @@
 var database = require("../database/config");
 
 function getLikes() {
-    console.log("ACESSEI O LIKE MODEL \n \n\t\t >> Se aqui der erro de 'Error: connect ECONNREFUSED',\n \t\t >> verifique suas credenciais de acesso ao banco\n \t\t >> e se o servidor de seu BD está rodando corretamente. \n\n function mostrarlikes()");
+    console.log("ACESSEI O GETLIKES MODEL \n \n\t\t >> Se aqui der erro de 'Error: connect ECONNREFUSED',\n \t\t >> verifique suas credenciais de acesso ao banco\n \t\t >> e se o servidor de seu BD está rodando corretamente. \n\n function mostrarlikes()");
     var instrucao = `
     select (sum(userLike)),
     (select (sum(userLike)) from UserToPic where fkPic = 1) as 'Like1',
@@ -16,9 +16,19 @@ function getLikes() {
 }
 
 function knowLike1(idUser) {
-    console.log("ACESSEI O LIKE MODEL")
+    console.log("ACESSEI O KNOWLIKE MODEL")
     var instrucao = `
-    select userLike as 'like1' from UserToPic, userTable where fkPic = 1 and fkUser = idUser and fkUser = ${idUser};
+    select userLike as 'Like1' from UserToPic, userTable where fkPic = 1 and fkUser = idUser and fkUser = ${idUser};
+    `;
+
+    console.log("Executando a instrução SQL: \n" + instrucao);
+    return database.executar(instrucao);
+}
+
+function updateLike(idUpdate, idPic) {
+    console.log("ACESSEI O UPDATELIKE MODEL")
+    var instrucao = `
+    update UserToPic set userLike = 1 where fkUser = ${idUpdate} and fkPic = ${idPic};
     `;
 
     console.log("Executando a instrução SQL: \n" + instrucao);
@@ -27,6 +37,7 @@ function knowLike1(idUser) {
 
 module.exports = {
     getLikes,
+    updateLike,
     knowLike1
     // knowLike2,
     // knowLike3,

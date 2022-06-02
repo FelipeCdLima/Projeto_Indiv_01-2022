@@ -11,4 +11,8 @@ router.post("/darLike1", function (req, res) {
     likeController.knowLike1(req, res);
 });
 
+router.post("/updateLike", function (req, res) {
+    likeController.updateLike(req, res);
+});
+
 module.exports = router;
