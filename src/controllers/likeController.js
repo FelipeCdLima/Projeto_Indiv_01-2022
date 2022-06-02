@@ -58,9 +58,30 @@ function updateLike(req, res) {
     );
 }
 
+function updateDislike(req, res) {
+    var idUpdate = req.body.idUpdate;
+    var idPic = req.body.idPic;
+    likeModel.updateDislike(idUpdate, idPic)
+    .then(function (resultado) {
+        // if (resultado.length > 0) {
+            res.status(200).json(resultado);
+            // res.json(resultado[0]);
+        // }else {
+            // res.status(204).send("Nenhum resultado encontrado!")
+        // }
+    }).catch(
+        function (erro) {
+            console.log(erro);
+            console.log("Houve um erro ao realizar a consulta! Erro: ", erro.sqlMessage);
+            res.status(500).json(erro.sqlMessage);
+        }
+    );
+}
+
 module.exports = {
     getLikes,
     updateLike,
+    updateDislike,
     knowLike1
     // knowLike2,
     // knowLike3,

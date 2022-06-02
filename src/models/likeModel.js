@@ -35,9 +35,20 @@ function updateLike(idUpdate, idPic) {
     return database.executar(instrucao);
 }
 
+function updateDislike(idUpdate, idPic) {
+    console.log("ACESSEI O UPDATEDISLIKE MODEL")
+    var instrucao = `
+    update UserToPic set userLike = 0 where fkUser = ${idUpdate} and fkPic = ${idPic};
+    `;
+
+    console.log("Executando a instrução SQL: \n" + instrucao);
+    return database.executar(instrucao);
+}
+
 module.exports = {
     getLikes,
     updateLike,
+    updateDislike,
     knowLike1
     // knowLike2,
     // knowLike3,

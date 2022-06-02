@@ -15,4 +15,8 @@ router.post("/updateLike", function (req, res) {
     likeController.updateLike(req, res);
 });
 
+router.post("/updateDislike", function (req, res) {
+    likeController.updateDislike(req, res);
+});
+
 module.exports = router;

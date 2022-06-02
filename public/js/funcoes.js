@@ -131,14 +131,16 @@ function darLike1() {
                     // setTimeout(mostrarLikes(), 2000);
 
                 } else if (json[0].Like1 == 1) {
-                    updateDeslike(idUser, pic);
+                    updateDislike(idUser, pic);
                     
                 } else {
                     console.log("ERRO NA VERIFICAÇÃO DE 1 OU 0")
                 }
             }); 
             
-            setTimeout(() => mostrarLikes(),3000)
+            setTimeout(() => mostrarLikes(),1000)
+            setTimeout(() => mostrarLikes(),1500)
+            setTimeout(() => mostrarLikes(),2000)
 
         } else {
 
@@ -224,7 +226,7 @@ async function updateDislike(idUser, pic) {
             idPic: pic
         })
     }).then(function (resposta) {
-        console.log("ESTOU NO THEN DO updateLike()!")
+        console.log("ESTOU NO THEN DO updateDislike()!")
 
         if (resposta.ok) {
 
