@@ -19,9 +19,10 @@ function getLikes(req, res) {
     );
 }
 
-function knowLike1(req, res) {
+function knowLike(req, res) {
     var idUser = req.body.idServer;
-    likeModel.knowLike1(idUser)
+    var idPic = req.body.idFoto;
+    likeModel.knowLike(idUser, idPic)
     .then(function (resultado) {
         if (resultado.length > 0) {
             res.status(200).json(resultado);
@@ -82,10 +83,5 @@ module.exports = {
     getLikes,
     updateLike,
     updateDislike,
-    knowLike1
-    // knowLike2,
-    // knowLike3,
-    // knowLike4,
-    // knowLike5,
-    // knowLike6
+    knowLike
 }

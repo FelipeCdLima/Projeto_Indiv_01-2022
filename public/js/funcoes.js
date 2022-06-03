@@ -12,7 +12,7 @@ function validarSessao() {
     var a_cadastro = document.getElementById("a_cadastro");
     var b_sair = document.getElementById("b_sair");
 
-    var gAdvHover = document.getElementById("gAdvHover");
+    // var gAdvHover = document.getElementById("gAdvHover");
 
     var ima1 = document.getElementById("ima1");
     var ima2 = document.getElementById("ima2");
@@ -34,12 +34,12 @@ function validarSessao() {
 
         // gAdvHover.onclick = GuiaLogado;
 
-        ima1.onclick = darLike1;
-        ima2.onclick = darLike2;
-        ima3.onclick = darLike3;
-        ima4.onclick = darLike4;
-        ima5.onclick = darLike5;
-        ima6.onclick = darLike6;
+        ima1.onclick = getFoto1;
+        ima2.onclick = getFoto2;
+        ima3.onclick = getFoto3;
+        ima4.onclick = getFoto4;
+        ima5.onclick = getFoto5;
+        ima6.onclick = getFoto6;
 
         // finalizarAguardar();
     } else {
@@ -47,7 +47,7 @@ function validarSessao() {
         b_usuario.style.display = 'none';
         b_sair.style.display = 'none';
 
-        gAdvHover.onclick = GuiaNaoLogado;
+        // gAdvHover.onclick = GuiaNaoLogado;
 
         ima1.onclick =nadaAcontece;
         ima2.onclick =nadaAcontece;
@@ -98,21 +98,22 @@ function fecharModal() {
 
 
 
-function darLike1() {
+function darLike(setFoto) {
     console.log('Clickei na 1ª IMG')
     idUser = sessionStorage.getItem('ID_USUARIO');
-    var pic = 1;
+    var pic = setFoto;
 
-    fetch("/likes/darLike1", {
+    fetch("/likes/darLike", {
         method: "POST",
         headers: {
             "Content-Type": "application/json"
         },
         body: JSON.stringify({
-            idServer: idUser
+            idServer: idUser,
+            idFoto: pic
         })
     }).then(function (resposta) {
-        console.log("ESTOU NO THEN DO darLike1()!")
+        console.log("ESTOU NO THEN DO darLike()!")
 
         if (resposta.ok) {
 
@@ -144,7 +145,7 @@ function darLike1() {
 
         } else {
 
-            console.log("Houve um erro na FUNC darLike1");
+            console.log("Houve um erro na FUNC darLike");
 
             resposta.text().then(texto => {
                 console.error(texto);
@@ -155,21 +156,6 @@ function darLike1() {
     }).catch(function (erro) {
         console.log(erro);
     })
-}
-function darLike2() {
-    // console.log('Clickei na 2ª IMG')
-}
-function darLike3() {
-    // console.log('Clickei na 3ª IMG')
-}
-function darLike4() {
-    // console.log('Clickei na 4ª IMG')
-}
-function darLike5() {
-    // console.log('Clickei na 5ª IMG')
-}
-function darLike6() {
-    // console.log('Clickei na 6ª IMG')
 }
 
 async function updateLike(idUser, pic) {

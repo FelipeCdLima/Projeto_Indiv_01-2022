@@ -15,8 +15,14 @@ button {
     background-color: rgb(24, 24, 24);
 }
 
+.header a {
+    transition: all 0.2s ease-in-out;
+}
+
 .header a:hover {
     color: #e2b84d;
+    /* color: rgba(255, 255, 255, 1); */
+    text-shadow: 0 0px 10px #f1d488;
 }
 
 .container {
@@ -48,6 +54,10 @@ button {
     align-items: center;
     padding: 0%;
     width: 60%;
+}
+
+.navbar a:hover {
+    font-size: 32px;
 }
 
 a {
@@ -84,7 +94,7 @@ a {
     color: #daa520;
     border-left: 10vw; border-right: 10vw;
     display: flex;
-    width: 80vw;
+    width: 100%;
     justify-content: center;
     /* flex-direction: column; */
     align-items: center;
@@ -137,6 +147,25 @@ a {
     justify-content: center;
     line-height: 5vh;
     border: solid #daa520 2px;
+    border-radius: 10px;
+    transition: all 0.2s ease-in-out;
+}
+
+.glow-button1:hover {
+    color: rgba(255, 255, 255, 1);
+    box-shadow: 0 0px 15px #f1d488;
+  }
+
+#galeriaVisu {
+    font-size: 32px;
+    align-items: center;
+    justify-content: center;
+}
+
+#galeriaVisu img {
+    height: 48px; width: 48px;
+    margin-left: 20px;
+    margin-right: 20px;
 }
 
 .row { /*Animations and Transitions CSS*/
@@ -149,6 +178,8 @@ a {
 .row img {
     width: 25vw;
     height: 75vh;
+    object-fit: cover;
+    border-radius: 10px;
 }
 
 .cell {
@@ -157,7 +188,7 @@ a {
     text-align: center;
     margin: 0.8%;
     border-radius: 10px;
-    border: solid #daa520 0.2vw;
+    /* border: solid #daa520 0.2vw; */
     width: 25vw;
 }
 
@@ -172,7 +203,12 @@ a {
     width: 40px;
     height: 40px;
     cursor: pointer;
+    transition: all 0.2s ease-in-out;
 }
+
+/* .pic img:hover {
+    box-shadow: 0 0px 15px #f1d488;
+} */
 
 .cont3 {
     border: dashed orangered 3px;
@@ -315,7 +351,7 @@ a {
 } */
 
 .highlight:hover {
-    background-color: rgb(70, 70, 70);
+    /* background-color: rgb(70, 70, 70); */
     border: #e2b84d solid 2px;
 }
 
@@ -415,9 +451,27 @@ a {
     justify-content: space-around;
 }
 
+.div_lore1 {
+    width: 100%;
+    height: 400px;
+    background-color: rgb(15, 15, 15);
+    display: flex;
+    /* margin-left: 100px;
+    margin-right: 100px; */
+    /* flex-direction: column; */
+    /* padding-left: 100px;
+    padding-right: 100px; */
+    justify-content: center;
+    align-items: center;
+}
+
+#ff1 {
+    background-color: rgb(24, 24, 24);
+}
+
 .cont5 {
-    margin-left: 5%;
-    margin-right: 5%;
+    /* margin-left: 5%;
+    margin-right: 5%; */
     display: flex;
     text-align: center;
     border: dashed lime 3px;
