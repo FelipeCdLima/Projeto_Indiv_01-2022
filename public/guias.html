@@ -129,7 +129,7 @@
                     <img src="assets/BLM/Spells/B2.png">
                     <p>A partir do nível 12 você ganha acesso à versão AoE, ou seja, a versão em área do BLIZZARD I, com ela
                         você é capaz de causar mais dano quando há vários inimigos juntos. Recomenda-se que utilize esta magia a partir do
-                        terceiro alvo, equanto dois alvos seu dano ainda é maior utilizando apenas BLIZZARD I. Esta magia também permite que você troque de fogo para <span class="gelinho">gelo</span> sem utilizar a Transpose, 
+                        terceiro alvo, equanto dois alvos seu dano ainda é maior utilizando apenas BLIZZARD I. Esta magia também permite que você troque de <span class="foguinho">fogo</span> para <span class="gelinho">gelo</span> sem utilizar a Transpose, 
                         o que facilita e agiliza a rotação da classe.
                     </p>
                 </div><br>
@@ -145,7 +145,7 @@
                 <div id="freezebasic">
                     <h3>Freeze</h3>
                     <img src="assets/BLM/Spells/Freeze.png">
-
+                    
                 </div>
             </div>
             <div class="AstralFireGuide" id="AstralFireB">
@@ -206,8 +206,18 @@
         
     </div>
 
+    <div class="container cont1" id="contInter" style="display: none;">
+
+    </div>
+
     <div class="container cont1" id="contAdvanced" style="display: none;">
 
+    </div>
+
+    <div class="container cont1" id="galeriaVisu">
+        <div class="avisoErro">
+            <h2>Você precisa estar logado em sua conta para acessar este conteúdo!</h2>
+        </div>
     </div>
 </body>
 </html>
@@ -215,6 +225,7 @@
     var idUser = sessionStorage.ID_USUARIO;
     function showB() {
         contBasico.style.display = 'flex';
+        contInter.style.display = 'none';
         contAdvanced.style.display = 'none';
     }
 
@@ -227,11 +238,13 @@
         if (idUser == null) {
             console.log("NÃO LOGADO")
             contBasico.style.display = 'none';
-            contAdvanced.style.display = 'flex';
+            contInter.style.display = 'none';
+            contAdvanced.style.display = 'none';
         } else if (idUser != null) {
             console.log("LOGADO")
-            contBasico.style.display = 'flex';
-            contAdvanced.style.display = 'none';
+            contBasico.style.display = 'none';
+            contInter.style.display = 'none';
+            contAdvanced.style.display = 'flex';
         } else {
             console.log("ERRO NO ID_USER AT sessionStorage")
         }

@@ -9,10 +9,19 @@ button {
     cursor: pointer;
 }
 
+ul {
+    list-style-type: none;
+}
+
+li {
+    cursor: pointer;
+}
+
 .header {
     height: 12vh;
     width: 100%;
     background-color: rgb(24, 24, 24);
+    /* border-bottom: #daa520 solid 2px; */
 }
 
 .header a {
@@ -35,13 +44,23 @@ button {
     text-shadow: 0 0px 10px #f1d488;
 }
 
+.ulGlow {
+    transition: all 0.2s ease-in-out;
+}
+
+.ulGlow:hover {
+    color: #e2b84d;
+    text-shadow: 0 0px 10px #f1d488;
+}
+
 .container {
     width: 80%;
     align-self: center;
     justify-content: space-around;
     display: flex;
     margin: auto;
-    border: dashed chartreuse 3px;
+    margin-bottom: none;
+    /* border: dashed chartreuse 3px; */
 }
 
 .cont1 {
@@ -67,11 +86,60 @@ button {
 }
 
 .navbar a:hover {
-    font-size: 32px;
+    font-size: 20px;
+}
+
+.sideList {
+    font-size: 25px;
+    line-height: 37px;
+    display: flex;
+    align-items: center;
+    text-align: left;
+    height: 102vh;
+    width: 100%;
+    margin-top: -6px;
+    background-color: rgb(24, 24, 24);
+    /* border-right: #daa520 solid 2px;
+    border-bottom: #daa520 solid 2px; */
+    /* position: sticky;
+    top: 0; */
+}
+
+#contList {
+        position: sticky;
+        top: 0;
+}
+
+.guideFramework {
+    display: flex;
+    width: 100%;
+    /* justify-content: center; */
+}
+
+.contGuideDark {
+    width: 127.8%;
+    background-color: rgb(30, 30, 30);
+    /* margin-left: 10%; margin-right: 10%; margin-top: 2%; */
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    padding-top: 20px; padding-bottom: 20px;
+}
+
+.contGuideLight {
+    width: 127.8%;
+    background-color: rgb(80, 80, 80);
+    /* margin-left: 10%; margin-right: 10%; margin-top: 2%; */
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    padding-top: 20px; padding-bottom: 20px;
 }
 
 #b_sair:hover {
-    font-size: 32px;
+    font-size: 20px;
 }
 
 a {
@@ -176,6 +244,21 @@ a {
     justify-content: center;
 }
 
+.avisoErro {
+    font-size: 24px;
+    width: 50%;
+    background-color: #740909af;
+    padding: 10px;
+    margin-top: 25px;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+    flex-direction: column;
+    border-radius: 5px;
+    border: #daa520 2px solid;
+}
+
 #galeriaVisu img {
     height: 48px; width: 48px;
     margin-left: 20px;
@@ -186,7 +269,7 @@ a {
     display: flex;
     justify-content: space-evenly;
     width: 100%;
-    border: dashed green 3px;
+    /* border: dashed green 3px; */
 }
 
 .row img {
@@ -235,6 +318,7 @@ a {
     flex-direction: column;
     align-items: center;
     text-align: center;
+    /* border: dashed cyan 2px; */
 }
 
 .UmbralIceGuide {
@@ -243,6 +327,7 @@ a {
     /*height: 700px;*/
     background-color: #a1d1ecb4;
     padding: 2%;
+    border-radius: 10px;
     color: #ffffff;
 }
 
@@ -252,6 +337,7 @@ a {
     /*height: 700px;*/
     background-color: #dd371ac4;
     padding: 2%;
+    border-radius: 10px;
 }
 
 .GuideFloatText {
@@ -401,8 +487,8 @@ a {
 }
 
 .rotation {
-    background-color: rgb(24, 24, 24);
-    width: 80vw;
+    /* background-color: rgb(24, 24, 24); */
+    width: 1200px;
     /*height: 150px;*/
     display: flex;
     /* justify-content: center; */
@@ -488,11 +574,28 @@ a {
     margin-right: 5%; */
     display: flex;
     text-align: center;
-    border: dashed lime 3px;
+    /* border: dashed lime 3px; */
 }
 
 .cont5 img {
     width: 540px;
+}
+
+.superCont {
+    width: 90%;
+    display: flex;
+    margin-top: none;
+    justify-content: space-evenly;
+    /* border: dashed salmon 2px; */
+}
+
+.superCont .cont2 {
+    margin-left: none; margin-right: none; margin-top: none;
+}
+
+.superCont .cont4 {
+    width: 80%;
+    margin-left: none; margin-right: none; margin-top: none;
 }
 
 /* SPELLS */
@@ -534,6 +637,10 @@ a {
 
 .b4 {
     background-image: url('../assets/BLM/Spells/B4.png');
+}
+
+.freeze {
+    background-image: url('../assets/BLM/Spells/Freeze.png');
 }
 
 .t1 {
