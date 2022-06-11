@@ -216,6 +216,8 @@
 
     <div class="container cont1" id="galeriaVisu">
         <div class="avisoErro">
+            <br>
+            <img src="assets/BLM/Lock.png">
             <h2>Você precisa estar logado em sua conta para acessar este conteúdo!</h2>
         </div>
     </div>
@@ -227,6 +229,7 @@
         contBasico.style.display = 'flex';
         contInter.style.display = 'none';
         contAdvanced.style.display = 'none';
+        galeriaVisu.style.display = 'none';
     }
 
     function showI() {
@@ -240,11 +243,13 @@
             contBasico.style.display = 'none';
             contInter.style.display = 'none';
             contAdvanced.style.display = 'none';
+            galeriaVisu.style.display = 'flex';
         } else if (idUser != null) {
             console.log("LOGADO")
             contBasico.style.display = 'none';
             contInter.style.display = 'none';
             contAdvanced.style.display = 'flex';
+            galeriaVisu.style.display = 'none';
         } else {
             console.log("ERRO NO ID_USER AT sessionStorage")
         }

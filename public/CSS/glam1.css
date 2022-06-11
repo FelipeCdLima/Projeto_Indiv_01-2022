@@ -662,3 +662,55 @@ a {
 .transpose {
     background-image: url('../assets/BLM/Spells/Transpose.png');
 }
+
+.sharpcast {
+    background-image: url('../assets/BLM/Spells/Sharpcast.png');
+}
+
+.despair {
+    background-image: url('../assets/BLM/Spells/Despair.png');
+}
+
+.hf2 {
+    background-image: url('../assets/BLM/Spells/HighFire2.png');
+}
+
+.hb2 {
+    background-image: url('../assets/BLM/Spells/HighBlizzard2.png');
+}
+
+.triplecast {
+    background-image: url('../assets/BLM/Spells/Triplecast.png');
+}
+
+.manafont {
+    background-image: url('../assets/BLM/Spells/Manafont.png');
+}
+
+.swiftcast {
+    background-image: url('../assets/BLM/Spells/Swiftcast.png');
+}
+
+.leyline {
+    background-image: url('../assets/BLM/Spells/LeyLines.png');
+}
+
+.amplifier {
+    background-image: url('../assets/BLM/Spells/Amplifier.png');
+}
+
+.xeno {
+    background-image: url('../assets/BLM/Spells/Xenoglossy.png');
+}
+
+.tincture {
+    background-image: url('../assets/BLM/Spells/Tincture.png');
+}
+
+.lucid {
+    background-image: url('../assets/BLM/Spells/LucidDreaming.png');
+}
+
+.paradox {
+    background-image: url('../assets/BLM/Spells/Paradox.png');
+}

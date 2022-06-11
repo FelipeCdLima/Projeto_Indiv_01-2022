@@ -96,10 +96,8 @@ function fecharModal() {
     divModal.style.display = "none";
 }
 
-
-
 function darLike(setFoto) {
-    console.log('Clickei na 1ª IMG')
+    console.log('Clickei numa IMG')
     idUser = sessionStorage.getItem('ID_USUARIO');
     var pic = setFoto;
 

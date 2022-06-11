@@ -34,7 +34,13 @@ function cadastrar(nome, senha) {
 function cadastrarFtUser(idUsuario){
     // Comando do mysql
     var instrucao = `
-        INSERT INTO UserToPic (fkPic, fkUser, userLike) VALUES (1, ${idUsuario}, 0), (2, ${idUsuario}, 0), (3, ${idUsuario}, 0), (4, ${idUsuario}, 0), (5, ${idUsuario}, 0), (6, ${idUsuario}, 0);
+        INSERT INTO UserToPic (fkPic, fkUser, userLike) VALUES 
+        (1, ${idUsuario}, 0),
+         (2, ${idUsuario}, 0),
+          (3, ${idUsuario}, 0),
+           (4, ${idUsuario}, 0),
+            (5, ${idUsuario}, 0),
+             (6, ${idUsuario}, 0);
     `;
     console.log("Executando a instrução SQL: \n" + instrucao);
     return database.executar(instrucao);
