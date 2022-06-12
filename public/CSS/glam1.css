@@ -90,8 +90,8 @@ li {
 }
 
 .sideList {
-    font-size: 25px;
-    line-height: 37px;
+    font-size: 30px;
+    line-height: 45px;
     display: flex;
     align-items: center;
     text-align: left;
@@ -514,6 +514,7 @@ a {
 
 .UmbralIceGuide img {
     box-shadow: 4px 4px 4px #000000af;
+    width: 64px;
 }
 
 .AstralFireGuide img {
