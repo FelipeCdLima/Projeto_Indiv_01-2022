@@ -495,7 +495,6 @@ a {
     align-items: center;
     /*padding-top: 10px; padding-bottom: 10px;*/
     flex-direction: column;
-
 }
 
 .gcd {
@@ -525,11 +524,23 @@ a {
     display: flex;
     justify-content: center;
     padding-top: 10px; padding-bottom: 5px;
-    /* border: dashed crimson 2px; */
+    border: dashed crimson 2px;
     width: 100%;
 }
 
+.cup2 {
+    display: flex;
+    justify-content: center;
+    padding-top: 10px; padding-bottom: 5px;
+    border: dashed crimson 2px;
+    width: 80%;
+}
+
 .cup .startRotation {
+    width: 48px; height: 48px;
+}
+
+.cup2 .startRotation {
     width: 48px; height: 48px;
 }
 
