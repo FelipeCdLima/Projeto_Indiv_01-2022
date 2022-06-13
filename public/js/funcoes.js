@@ -82,7 +82,7 @@ function finalizarAguardar(texto) {
 }
 
 function nadaAcontece() {
-    //Eis que nada acontece.... feijoada...
+    alert('Você precisa estar logado para acessar esta funcionalidade!')
 }
 
 // modal
